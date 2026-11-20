@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AETHER DEPT. — Everyday streetwear for those who make their own lane.">
+    <title>AETHER DEPT. | Everyday Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">
+            <img src="images/logo.png" alt="AETHER DEPT. Logo">
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#wishlist">Wishlist</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cart">
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">AETHER DEPT. — EVERYDAY STREETWEAR</p>
+                <h1>MADE TO<br>STAND APART.</h1>
+                <p class="hero-description">
+                    Clothes for those who make their own lane.
+                    Everyday pieces, unmistakable attitude.
+                </p>
+                <a href="#shop" class="hero-button">EXPLORE THE COLLECTION</a>
+            </div>
+        </section>
+
+        <section class="shop-section" id="shop">
+            <div class="section-header">
+                <div>
+                    <p class="section-subtitle">THE AETHER DEPT. SELECTION</p>
+                    <h2>LATEST DROPS.</h2>
+                </div>
+                <p class="product-count" id="product-count">16 PRODUCTS</p>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+
+                <!-- GRAPHIC TEES -->
+
+                <div class="product-card" data-category="Graphic Tees"
+                    data-description="A bold graphic tee featuring a striking white spiky-haired illustration with red accents. Made for those who refuse to blend in.">
+                    <div class="product-image">
+                        <img src="images/products/product-1.jpg" alt="Static Spike Graphic Tee">
+                    </div>
+                    <div class="product-info">
+                        <h3>STATIC SPIKE TEE</h3>
+                        <p>₱699.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Static Spike Tee to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-1">SELECT SIZE</label>
+                        <select class="product-size" id="size-1">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="STATIC SPIKE TEE" data-price="699">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Graphic Tees"
+                    data-description="A black graphic tee with a sharp white and red design. A clean statement piece with a bold visual identity.">
+                    <div class="product-image">
+                        <img src="images/products/product-2.jpg" alt="Redline Graphic Tee">
+                    </div>
+                    <div class="product-info">
+                        <h3>REDLINE TEE</h3>
+                        <p>₱649.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Redline Tee to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-2">SELECT SIZE</label>
+                        <select class="product-size" id="size-2">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="REDLINE TEE" data-price="649">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Graphic Tees"
+                    data-description="A black graphic tee with camouflage sleeves and a camouflage statement design. Inspired by utility wear and street culture.">
+                    <div class="product-image">
+                        <img src="images/products/product-3.jpg" alt="Fieldwork Graphic Tee">
+                    </div>
+                    <div class="product-info">
+                        <h3>FIELDWORK TEE</h3>
+                        <p>₱749.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Fieldwork Tee to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-3">SELECT SIZE</label>
+                        <select class="product-size" id="size-3">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="FIELDWORK TEE" data-price="749">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Graphic Tees"
+                    data-description="A black graphic tee featuring two oversized lip graphics at the center. An expressive design made to catch attention.">
+                    <div class="product-image">
+                        <img src="images/products/product-4.jpg" alt="Double Take Graphic Tee">
+                    </div>
+                    <div class="product-info">
+                        <h3>DOUBLE TAKE TEE</h3>
+                        <p>₱699.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Double Take Tee to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-4">SELECT SIZE</label>
+                        <select class="product-size" id="size-4">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="DOUBLE TAKE TEE" data-price="699">ADD TO CART</button>
+                </div>
+
+                <!-- WINDBREAKERS -->
+
+                <div class="product-card" data-category="Windbreakers"
+                    data-description="A black and charcoal gray windbreaker designed for everyday layering. A versatile outerwear piece with an understated streetwear look.">
+                    <div class="product-image">
+                        <img src="images/products/product-5.jpg" alt="Nightshift Windbreaker">
+                    </div>
+                    <div class="product-info">
+                        <h3>NIGHTSHIFT WINDBREAKER</h3>
+                        <p>₱1,499.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Nightshift Windbreaker to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-5">SELECT SIZE</label>
+                        <select class="product-size" id="size-5">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="NIGHTSHIFT WINDBREAKER" data-price="1499">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Windbreakers"
+                    data-description="A black and cream color-block windbreaker that balances neutral tones with a modern, relaxed silhouette.">
+                    <div class="product-image">
+                        <img src="images/products/product-6.jpg" alt="Offtrack Windbreaker">
+                    </div>
+                    <div class="product-info">
+                        <h3>OFFTRACK WINDBREAKER</h3>
+                        <p>₱1,499.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Offtrack Windbreaker to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-6">SELECT SIZE</label>
+                        <select class="product-size" id="size-6">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="OFFTRACK WINDBREAKER" data-price="1499">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Windbreakers"
+                    data-description="A black windbreaker with navy and gray detailing. A darker color combination for effortless everyday styling.">
+                    <div class="product-image">
+                        <img src="images/products/product-7.jpg" alt="Afterdark Windbreaker">
+                    </div>
+                    <div class="product-info">
+                        <h3>AFTERDARK WINDBREAKER</h3>
+                        <p>₱1,549.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Afterdark Windbreaker to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-7">SELECT SIZE</label>
+                        <select class="product-size" id="size-7">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="AFTERDARK WINDBREAKER" data-price="1549">ADD TO CART</button>
+                </div>
+
+                <!-- POLOS -->
+
+                <div class="product-card" data-category="Polos"
+                    data-description="A black long-sleeve polo with a statement design. Combines a more refined silhouette with everyday streetwear attitude.">
+                    <div class="product-image">
+                        <img src="images/products/product-8.jpg" alt="No Signal Long Sleeve Polo">
+                    </div>
+                    <div class="product-info">
+                        <h3>NO SIGNAL LONGSLEEVE POLO</h3>
+                        <p>₱999.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add No Signal Longsleeve Polo to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-8">SELECT SIZE</label>
+                        <select class="product-size" id="size-8">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="NO SIGNAL LONGSLEEVE POLO" data-price="999">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Polos"
+                    data-description="A gray half-zip polo with a clean, minimal look. An easy-to-style piece that brings a refined touch to casual outfits.">
+                    <div class="product-image">
+                        <img src="images/products/product-9.jpg" alt="Ashline Half Zip Polo">
+                    </div>
+                    <div class="product-info">
+                        <h3>ASHLINE HALF-ZIP POLO</h3>
+                        <p>₱1,099.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Ashline Half-Zip Polo to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-9">SELECT SIZE</label>
+                        <select class="product-size" id="size-9">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="ASHLINE HALF-ZIP POLO" data-price="1099">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Polos"
+                    data-description="A dark green half-zip polo with a versatile color and a clean silhouette. Made for understated everyday styling.">
+                    <div class="product-image">
+                        <img src="images/products/product-10.jpg" alt="Moss Code Half Zip Polo">
+                    </div>
+                    <div class="product-info">
+                        <h3>MOSS CODE HALF-ZIP POLO</h3>
+                        <p>₱1,099.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Moss Code Half-Zip Polo to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-10">SELECT SIZE</label>
+                        <select class="product-size" id="size-10">
+                            <option value="S">S</option>
+                            <option value="M" selected>M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="MOSS CODE HALF-ZIP POLO" data-price="1099">ADD TO CART</button>
+                </div>
+
+                <!-- BOTTOMS -->
+
+                <div class="product-card" data-category="Bottoms"
+                    data-description="Black baggy pants covered in bold white statement prints. A standout piece designed to bring attention to any outfit.">
+                    <div class="product-image">
+                        <img src="images/products/product-11.jpg" alt="Noise Print Baggy Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>NOISE PRINT BAGGIES</h3>
+                        <p>₱1,199.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Noise Print Baggies to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-11">SELECT WAIST SIZE</label>
+                        <select class="product-size" id="size-11">
+                            <option value="28">28</option>
+                            <option value="30" selected>30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="NOISE PRINT BAGGIES" data-price="1199">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Bottoms"
+                    data-description="Clean white baggy pants with a relaxed silhouette. An easy neutral essential that pairs with almost anything.">
+                    <div class="product-image">
+                        <img src="images/products/product-12.jpg" alt="Blank Canvas Baggy Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>BLANK CANVAS BAGGIES</h3>
+                        <p>₱1,099.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Blank Canvas Baggies to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-12">SELECT WAIST SIZE</label>
+                        <select class="product-size" id="size-12">
+                            <option value="28">28</option>
+                            <option value="30" selected>30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="BLANK CANVAS BAGGIES" data-price="1099">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Bottoms"
+                    data-description="Camouflage baggy pants inspired by utility and military styling. A statement bottom for relaxed streetwear fits.">
+                    <div class="product-image">
+                        <img src="images/products/product-13.jpg" alt="Wildcard Camo Baggy Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>WILDCARD CAMO BAGGIES</h3>
+                        <p>₱1,299.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Wildcard Camo Baggies to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-13">SELECT WAIST SIZE</label>
+                        <select class="product-size" id="size-13">
+                            <option value="28">28</option>
+                            <option value="30" selected>30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="WILDCARD CAMO BAGGIES" data-price="1299">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Bottoms"
+                    data-description="Gray baggy pants with a relaxed fit and versatile neutral color. An everyday essential for effortless styling.">
+                    <div class="product-image">
+                        <img src="images/products/product-14.jpg" alt="Concrete Baggy Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>CONCRETE BAGGIES</h3>
+                        <p>₱1,099.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Concrete Baggies to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-14">SELECT WAIST SIZE</label>
+                        <select class="product-size" id="size-14">
+                            <option value="28">28</option>
+                            <option value="30" selected>30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="CONCRETE BAGGIES" data-price="1099">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Bottoms"
+                    data-description="Beige-washed denim baggy pants with a vintage-inspired finish. A relaxed denim staple with a worn-in look.">
+                    <div class="product-image">
+                        <img src="images/products/product-15.jpg" alt="Dustwash Denim Baggy Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>DUSTWASH DENIM BAGGIES</h3>
+                        <p>₱1,399.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Dustwash Denim Baggies to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-15">SELECT WAIST SIZE</label>
+                        <select class="product-size" id="size-15">
+                            <option value="28">28</option>
+                            <option value="30" selected>30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="DUSTWASH DENIM BAGGIES" data-price="1399">ADD TO CART</button>
+                </div>
+
+                <div class="product-card" data-category="Bottoms"
+                    data-description="Black washed denim jorts with a relaxed, oversized fit. A casual statement piece for warmer days and laid-back outfits.">
+                    <div class="product-image">
+                        <img src="images/products/product-16.jpg" alt="Blackout Wash Jorts">
+                    </div>
+                    <div class="product-info">
+                        <h3>BLACKOUT WASH JORTS</h3>
+                        <p>₱1,099.00</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="wishlist-button" type="button" aria-label="Add Blackout Wash Jorts to wishlist" aria-pressed="false">♡</button>
+                        <button class="view-details" type="button">VIEW DETAILS</button>
+                    </div>
+                    <div class="product-size-selection">
+                        <label for="size-16">SELECT WAIST SIZE</label>
+                        <select class="product-size" id="size-16">
+                            <option value="28">28</option>
+                            <option value="30" selected>30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+                    <button class="add-to-cart" type="button" data-name="BLACKOUT WASH JORTS" data-price="1099">ADD TO CART</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="about-label">MORE THAN WHAT YOU WEAR</p>
+            <h2>STYLE ISN'T<br>GIVEN. IT'S MADE.</h2>
+            <p class="about-description">
+                We believe what you wear should say something without
+                having to explain. AETHER DEPT. brings together everyday
+                essentials for people who move differently, think freely,
+                and make their own rules.
+            </p>
+            <a href="#shop" class="about-button">FIND YOUR STYLE ↗</a>
+        </section>
+
+        <section class="wishlist-section" id="wishlist">
+            <div class="section-header">
+                <div>
+                    <p class="section-subtitle">KEEP THE PIECES YOU LOVE</p>
+                    <h2>YOUR WISHLIST.</h2>
+                </div>
+                <p class="product-count" id="wishlist-count">0 SAVED</p>
+            </div>
+
+            <div id="wishlist-items" class="wishlist-items">
+                <p class="empty-cart">You haven't saved any products yet.</p>
+            </div>
+        </section>
+
+        <section class="cart-section" id="cart">
+            <div class="cart-header">
+                <p class="section-subtitle">YOUR SELECTION</p>
+                <h2>YOUR CART.</h2>
+            </div>
+
+            <div class="checkout-layout">
+                <div class="cart-content">
+                    <div id="cart-items">
+                        <p class="empty-cart">Your cart is currently empty.</p>
+                    </div>
+
+                    <div class="cart-summary">
+                        <h3>Total: <span id="cart-total">₱0.00</span></h3>
+                    </div>
+                </div>
+
+                <form class="checkout-form" id="checkout-form">
+                    <h3>CHECKOUT DETAILS</h3>
+
+                    <div class="form-group">
+                        <label for="customer-name">Full Name</label>
+                        <input type="text" id="customer-name" name="customer-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-email">Email Address</label>
+                        <input type="email" id="customer-email" name="customer-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Contact Number</label>
+                        <input type="tel" id="customer-phone" name="customer-phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-address">Delivery Address</label>
+                        <textarea id="customer-address" name="customer-address" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="">Select payment method</option>
+                            <option value="Cash on Delivery">Cash on Delivery</option>
+                            <option value="GCash (Simulation)">GCash</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="checkout-button">PLACE ORDER</button>
+
+                    <p class="checkout-note">
+                        This is a demonstration checkout. No actual payment will be collected.
+                    </p>
+                </form>
+            </div>
+
+            <div id="order-message" class="order-message" hidden></div>
+        </section>
+
+        <section class="order-history-section" id="order-history">
+            <div class="section-header">
+                <div>
+                    <p class="section-subtitle">YOUR PAST PURCHASES</p>
+                    <h2>ORDER HISTORY.</h2>
+                </div>
+                <p class="product-count" id="order-count">0 ORDERS</p>
+            </div>
+
+            <div id="order-history-list">
+                <p class="empty-cart">Your order history will appear here.</p>
+            </div>
+        </section>
+
+        <div class="product-modal" id="product-modal" hidden>
+            <div class="modal-overlay" id="modal-overlay"></div>
+
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+                <button class="modal-close" id="modal-close" type="button" aria-label="Close details">&times;</button>
+
+                <div class="modal-image">
+                    <img id="modal-image" src="" alt="">
+                </div>
+
+                <div class="modal-details">
+                    <p class="section-subtitle">AETHER DEPT. COLLECTION</p>
+                    <h2 id="modal-name"></h2>
+                    <h3 id="modal-price"></h3>
+                    <p id="modal-description"></p>
+
+                    <label class="modal-size-label" for="modal-size">SELECT SIZE</label>
+                    <select id="modal-size" class="product-size"></select>
+
+                    <button class="modal-shop-button" id="modal-shop-button" type="button">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="AETHER DEPT. Logo">
+                <p>Everyday essentials. Unmistakable attitude.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>EXPLORE</h3>
+                <a href="index.html">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#wishlist">Wishlist</a>
+                <a href="#order-history">Order History</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>GET IN TOUCH</h3>
+                <a href="mailto:hello@aetherdept.com">Email Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AETHER DEPT. ALL RIGHTS RESERVED.</p>
+            <p>MADE FOR EVERYDAY EXPRESSION.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

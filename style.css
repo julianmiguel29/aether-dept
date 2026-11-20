@@ -1,0 +1,1129 @@
+
+@font-face {
+    font-family: "Rustic Printed";
+    src: url("fonts/RusticPrintedStamp.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Battery Park";
+    src: url("fonts/BatteryPark.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-background: #F4F3EF;
+    --color-gray: #737373;
+    --color-olive: #535933;
+    --color-black: #000000;
+    --color-text: var(--color-black);
+    --color-text-secondary: var(--color-gray);
+    --color-primary: var(--color-black);
+    --color-accent: var(--color-olive);
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 7%;
+    background-color: var(--color-background);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-logo {
+    flex: 0 0 160px;
+}
+
+.nav-logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    gap: 0;
+    margin: 0 35px;
+    max-width: 850px;
+}
+
+.nav-links a,
+.nav-cart {
+    font-family: "Battery Park", sans-serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.nav-cart {
+    flex: 0 0 auto;
+}
+
+.nav-links a,
+.nav-cart a {
+    transition: color var(--transition);
+}
+
+.nav-links a:hover,
+.nav-cart a:hover {
+    color: var(--color-accent);
+}
+/* HERO SECTION */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-background);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    color: #D2D4B8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-family: "Battery Park", sans-serif;
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 1;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 420px;
+    color: rgba(244, 243, 239, 0.85);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: var(--color-background);
+    color: var(--color-black);
+    padding: 17px 36px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.hero-button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    transform: translateY(-3px);
+}
+
+/* SHOP SECTION */
+
+.shop-section {
+    padding: 100px 7%;
+    background-color: var(--color-background);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 45px;
+}
+
+.section-subtitle {
+    color: var(--color-accent);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-header h2,
+.cart-header h2 {
+    font-family: "Battery Park", sans-serif;
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: normal;
+}
+
+.product-count {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--color-gray);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    min-width: 0;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: #E5E3DC;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding-top: 15px;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+.product-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.view-details {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--color-black);
+    background: transparent;
+    color: var(--color-black);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.view-details:hover {
+    background-color: var(--color-black);
+    color: var(--color-background);
+}
+
+.wishlist-button {
+    width: 43px;
+    flex-shrink: 0;
+    border: 1px solid #C9C7BF;
+    background: transparent;
+    color: var(--color-black);
+    font-size: 23px;
+    transition: color var(--transition), background-color var(--transition);
+}
+
+.wishlist-button:hover,
+.wishlist-button.saved {
+    color: var(--color-background);
+    background-color: var(--color-olive);
+    border-color: var(--color-olive);
+}
+
+.product-size-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.product-size-selection label,
+.modal-size-label {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.product-size {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #C9C7BF;
+    background-color: var(--color-background);
+    color: var(--color-black);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.product-size:focus {
+    outline: none;
+    border-color: var(--color-olive);
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 13px;
+    background-color: var(--color-black);
+    color: var(--color-background);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: background-color var(--transition);
+}
+
+.add-to-cart:hover {
+    background-color: var(--color-olive);
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+    padding: 120px 15%;
+    background-color: var(--color-olive);
+    color: var(--color-background);
+    text-align: center;
+}
+
+.about-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    color: #D2D4B8;
+}
+
+.about-section h2 {
+    font-family: "Battery Park", sans-serif;
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.about-description {
+    max-width: 580px;
+    margin: 0 auto 35px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(244, 243, 239, 0.85);
+}
+
+.about-button {
+    display: inline-block;
+    border: 1px solid var(--color-background);
+    padding: 15px 30px;
+    font-family: "Battery Park", sans-serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.about-button:hover {
+    background-color: var(--color-background);
+    color: var(--color-olive);
+}
+
+/* WISHLIST */
+
+.wishlist-section,
+.order-history-section {
+    padding: 90px 7%;
+    background-color: #EAE8E1;
+}
+
+.wishlist-section .section-header {
+    margin-bottom: 45px;
+}
+
+.wishlist-section .section-header h2 {
+    font-family: "Battery Park", sans-serif;
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: normal;
+}
+
+#wishlist-count {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--color-gray);
+}
+
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.wishlist-card {
+    min-width: 0;
+    min-height: 190px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-background);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.wishlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.wishlist-card h3 {
+    font-family: "Battery Park", sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.wishlist-card p {
+    color: var(--color-olive);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.wishlist-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.wishlist-card-actions button {
+    min-height: 42px;
+    padding: 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.wishlist-add {
+    flex: 1;
+    background-color: var(--color-olive);
+    color: var(--color-background);
+    border: 1px solid var(--color-olive);
+}
+
+.wishlist-add:hover {
+    background-color: #414527;
+    border-color: #414527;
+}
+
+.wishlist-remove {
+    flex-shrink: 0;
+    background-color: transparent;
+    color: var(--color-gray);
+    border: 1px solid #C9C7BF;
+}
+
+.wishlist-remove:hover {
+    color: var(--color-black);
+    border-color: var(--color-black);
+}
+
+.empty-cart {
+    color: var(--color-gray);
+    font-size: 14px;
+    padding: 25px 0;
+}
+
+.wishlist-items > .empty-cart {
+    grid-column: 1 / -1;
+    padding: 45px 20px;
+    background-color: var(--color-background);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* CART SECTION */
+
+.cart-section {
+    padding: 100px 7%;
+    background-color: var(--color-background);
+}
+
+.cart-header {
+    margin-bottom: 35px;
+}
+
+.cart-header h2 {
+    font-family: "Battery Park", sans-serif;
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: normal;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.cart-content {
+    width: 100%;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid #D8D6CF;
+}
+
+.cart-item-info h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.cart-item-info p {
+    font-size: 13px;
+    color: var(--color-gray);
+}
+
+.cart-item-size {
+    margin-top: 5px;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-button,
+.remove-button {
+    background: none;
+    color: var(--color-black);
+    font-size: 17px;
+    padding: 5px;
+}
+
+.remove-button {
+    color: #8B3434;
+    font-size: 12px;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+}
+
+.cart-summary h3 {
+    font-size: 18px;
+}
+
+#cart-total {
+    margin-left: 10px;
+}
+
+/* CHECKOUT FORM */
+
+.checkout-form {
+    padding: 35px;
+    background-color: #EAE8E1;
+}
+
+.checkout-form[hidden] {
+    display: none;
+}
+
+.checkout-form h3 {
+    font-family: "Battery Park", sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #C9C7BF;
+    background-color: var(--color-background);
+    color: var(--color-black);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--color-olive);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-black);
+    color: var(--color-background);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color var(--transition);
+}
+
+.checkout-button:hover {
+    background-color: var(--color-olive);
+}
+
+.checkout-note {
+    margin-top: 15px;
+    color: var(--color-gray);
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ORDER CONFIRMATION */
+
+.order-message {
+    margin-top: 35px;
+    padding: 30px;
+    background-color: #E5E8DA;
+    color: var(--color-olive);
+    line-height: 1.8;
+}
+
+.order-message[hidden] {
+    display: none;
+}
+
+.order-message h3 {
+    font-family: "Battery Park", sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.order-items {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px solid #C9C7BF;
+    border-bottom: 1px solid #C9C7BF;
+}
+
+.order-items p {
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.order-motivation {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #C9C7BF;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--color-black);
+}
+
+/* ORDER HISTORY */
+
+.order-history-section {
+    background-color: var(--color-background);
+}
+
+.order-history-card {
+    padding: 25px;
+    margin-bottom: 15px;
+    background-color: #EAE8E1;
+}
+
+.order-history-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.order-history-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.order-history-card p {
+    color: var(--color-gray);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.order-history-products {
+    padding: 15px 0;
+    border-top: 1px solid #C9C7BF;
+    border-bottom: 1px solid #C9C7BF;
+    margin: 15px 0;
+}
+
+.order-history-total {
+    color: var(--color-black) !important;
+    font-weight: bold;
+}
+
+/* PRODUCT DETAILS MODAL */
+
+.product-modal[hidden] {
+    display: none;
+}
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--color-background);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    font-size: 32px;
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+.modal-image {
+    min-height: 400px;
+    background: #EAE8E1;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.modal-details {
+    padding: 55px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-details h2 {
+    margin: 15px 0;
+    font-family: "Battery Park", sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.modal-details h3 {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.modal-details > p:not(.section-subtitle) {
+    color: var(--color-gray);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.modal-size-label {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.modal-shop-button {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--color-black);
+    color: var(--color-background);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.modal-shop-button:hover {
+    background: var(--color-olive);
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 70px 7% 25px;
+    background-color: var(--color-black);
+    color: var(--color-background);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 60px;
+}
+
+.footer-brand img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-brand p {
+    color: #B5B5B5;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links h3 {
+    font-family: "Battery Park", sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #B5B5B5;
+    font-size: 14px;
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--color-background);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #444;
+    padding-top: 22px;
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a,
+    .nav-cart {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+
+    .wishlist-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .checkout-layout {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: calc(100vh - 75px);
+        padding: 60px 7%;
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 10vw, 75px);
+    }
+
+    .hero-description {
+        max-width: 350px;
+    }
+
+    .shop-section,
+    .cart-section,
+    .wishlist-section,
+    .order-history-section {
+        padding: 70px 6%;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .about-section {
+        padding: 90px 8%;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .checkout-form {
+        padding: 25px;
+    }
+
+    .modal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image,
+    .modal-image img {
+        min-height: 220px;
+        max-height: 280px;
+    }
+
+    .modal-details {
+        padding: 30px 25px;
+    }
+
+    .modal-details h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wishlist-section .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .wishlist-items {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .wishlist-card {
+        min-height: 170px;
+        padding: 23px;
+    }
+
+    .wishlist-card-actions button {
+        min-height: 42px;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo img {
+        width: 115px;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding: 50px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 12px;
+    }
+
+    .product-info h3,
+    .product-info p {
+        font-size: 13px;
+    }
+
+    .about-section {
+        padding: 75px 7%;
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 55px 7% 25px;
+    }
+
+    .footer-top {
+        gap: 35px 15px;
+    }
+
+    .footer-brand img {
+        width: 135px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        line-height: 1.6;
+    }
+
+    .cart-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .order-history-top {
+        flex-direction: column;
+    }
+
+    .product-actions {
+        gap: 5px;
+    }
+
+    .wishlist-button {
+        width: 38px;
+    }
+
+    .view-details {
+        font-size: 9px;
+        padding: 10px 5px;
+    }
+}
